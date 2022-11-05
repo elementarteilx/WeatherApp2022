@@ -1,0 +1,24 @@
+body {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  width: 80%;
+}
+
+.input_box {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+h2 {
+  margin: 0 auto;
+  text-align: left;
+}
