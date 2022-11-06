@@ -1,10 +1,10 @@
 let currentTime = new Date();
 
+function updateCity(city) {}
+
 function formatDate(date) {
-  console.log("1");
-
   let minutes = date.getMinutes();
-
+  let hours = date.getHours();
   let index = date.getDay();
   let days = [
     "Sunday",
@@ -15,22 +15,20 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  console.log("2");
+
   let day = days[index];
   let month = date.getMonth();
-  console.log("3");
   console.log(`${day} ${hours}:${minutes}`);
-  console.log("4");
 
   return `${day} ${hours}:${minutes}`;
 }
 
-console.log("hello");
-
+//print date
 let clock = document.querySelector("h21");
 clock.innerHTML = formatDate(currentTime);
 
+//print current city
+let city_input = document.querySelector("#city_input");
+city_input.addEventListener("click", updateCity);
 let h2 = document.querySelector("h2");
 h2.innerHTML = "hello";
-
-console.log("hello1");
