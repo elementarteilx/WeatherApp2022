@@ -11,11 +11,9 @@ function updateCityname(event) {
   h2.innerHTML = `${cityInput.value}`;
 
   //preparation for temperature update
-  console.log("te");
-
-  let apiKey = "3ea863f1a0da2cf9365b79cccd1fe510";
+  let apiKey = "8a6ee44d7a95db9439f2411cfbeee474";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 
