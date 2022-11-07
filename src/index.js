@@ -1,6 +1,7 @@
 let currentTime = new Date();
 
-function updateCity(event) {
+//
+function updateCityname(event) {
   event.preventDefault();
   console.log("1");
   let cityInput = document.querySelector("#city_enter");
@@ -8,8 +9,24 @@ function updateCity(event) {
   let h2 = document.querySelector("h2");
   console.log("2");
   h2.innerHTML = `${cityInput.value}`;
+
+  //preparation for temperature update
+  console.log("te");
+
+  let apiKey = "3ea863f1a0da2cf9365b79cccd1fe510";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
 }
 
+function showTemperature(event) {
+  let temp = document.querySelector("h3");
+  console.log("3");
+  console.log(event);
+  console.log("4");
+}
+
+//returns the current formated date
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -35,10 +52,14 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function weatherCity(event) {}
+
 //print date
 let clock = document.querySelector("h21");
 clock.innerHTML = formatDate(currentTime);
 
 //print current city
 let city_input = document.querySelector("#city_input");
-city_input.addEventListener("click", updateCity);
+city_input.addEventListener("click", updateCityname);
+
+//update temperature
