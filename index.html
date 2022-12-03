@@ -22,11 +22,19 @@
   <body>
     <div class="card">
       <div class="container">
-        <h1>search Engine</h1>
         <div class="input_box">
-          <input type="search" , placeholder="Type a city.." id="city_enter" />
+        <div class="row">
 
-          <input type="submit" , value="Search" , id="city_input" />
+          <div class="col-6">          
+           <input type="search" , placeholder="Type a city.." id="city_enter" />
+          </div>
+          <div class="col-3">
+           <input type="submit" , value="Search" , colour="red", id="city_input" />
+          </div>
+          <div class="col-3">
+           <input type="submit" , value="Current" , id="current_city" />
+          </div>
+        </div>
         </div>
       </div>
       <h2 class="container">city</h2>
@@ -34,6 +42,7 @@
       <div class="row">
         <div class="col-sm-6">
           <h3 class="conatiner">temp</h3>
+
         </div>
         <div class="col-sm-6">
           <h4 class="container">humidity</h4>

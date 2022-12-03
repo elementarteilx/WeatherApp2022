@@ -18,9 +18,11 @@ function updateCityname(event) {
 }
 
 function showTemperature(event) {
-  let temp = document.querySelector("h3");
+  let tempOutput = document.querySelector("h3");
   console.log("3");
   console.log(event);
+  let temp = event.data.main.temp;
+  tempOutput.innerHTML = temp;
   console.log("4");
 }
 
