@@ -36,7 +36,12 @@ h3 {
   font-size: 15px;
 }
 
-.unitC {
-  color: white;
-  
+.Celsius {
+  background-color: white;
+  border: none;
+}
+
+.Fahrenheit {
+  background-color: white;
+  border: none;
 }
