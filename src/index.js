@@ -25,7 +25,8 @@ function showTemperature(event) {
   let temp = event.data.main.temp;
   let humidity = event.data.main.humidity;
   tempOutput.innerHTML = temp;
-  let humidityOutput = document.querySelector("h4");
+  let humidityOutput = document.querySelector("#humidity");
+  console.log(humidity);
   humidityOutput.innerHTML = `${humidity}%`;
   console.log(event.data.wind.speed);
   //console.log(event.data.rain.3h);  
