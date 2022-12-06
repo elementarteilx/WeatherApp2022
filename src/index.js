@@ -9,6 +9,7 @@ function updateCityname(event) {
   let h2 = document.querySelector("h2");
   console.log("2");
   h2.innerHTML = `${cityInput.value}`;
+  //var result = text.toUpperCase();
 
   //preparation for temperature update
   let apiKey = "8a6ee44d7a95db9439f2411cfbeee474";
@@ -17,13 +18,17 @@ function updateCityname(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+//changes showed weather data to current city
 function showTemperature(event) {
-  let tempOutput = document.querySelector("h3");
-  console.log("3");
+  let tempOutput = document.querySelector("#temperature");
   console.log(event);
   let temp = event.data.main.temp;
+  let humidity = event.data.main.humidity;
   tempOutput.innerHTML = temp;
-  console.log("4");
+  let humidityOutput = document.querySelector("h4");
+  humidityOutput.innerHTML = `${humidity}%`;
+  console.log(event.data.wind.speed);
+  //console.log(event.data.rain.3h);  
 }
 
 //returns the current formated date
@@ -63,3 +68,5 @@ let city_input = document.querySelector("#city_input");
 city_input.addEventListener("click", updateCityname);
 
 //update temperature
+
+showTemperature("Berlin");

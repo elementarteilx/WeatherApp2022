@@ -18,7 +18,14 @@ body {
   min-width: 100px;
 }
 
+.temperature {
+  font-size: 50px;
+}
+
 h2 {
-  margin: 0 auto;
-  text-align: left;
+  font-size: 15px;
+}
+
+h3 {
+  font-size: 15px;
 }

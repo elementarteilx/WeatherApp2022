@@ -40,19 +40,23 @@
       <h2 class="container">city</h2>
       <h21 class="container">date</h21>
       <div class="row">
-        <div class="col-sm-6">
-          <h3 class="conatiner">temp</h3>
-
+        <div class="col-6">
+          <div class="clearfix">
+            <div class="float-left">
+              <span class="temperature" id="temperature"></span
+              ><span class="unitC">°C</span> |
+              <span class="unitF">F</span>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <h4 class="container">humidity</h4>
-        </div>
+      <div class="col-6">
+        <ul>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span> km/h</li>
+        </ul>
       </div>
-
-      <h4>weather picture</h4>
       <script src="app.js"></script>
     </div>
-    <h6>link</h6>
     <script src="src/index.js"></script>
   </body>
 </html>
