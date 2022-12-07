@@ -72,4 +72,4 @@ city_input.addEventListener("click", updateCityname);
 
 //update temperature
 
-showTemperature("Berlin");
+updateCityname("Berlin");
