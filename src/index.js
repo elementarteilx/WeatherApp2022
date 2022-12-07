@@ -1,4 +1,5 @@
 let currentTime = new Date();
+let globaltemperature = 0;
 
 //
 function updateCityname(event) {
@@ -25,6 +26,7 @@ function showTemperature(event) {
   let temp = event.data.main.temp;
   let humidity = event.data.main.humidity;
   tempOutput.innerHTML = temp;
+  globaltemperature = temp;
   let humidityOutput = document.querySelector("#humidity");
   console.log(humidity);
   humidityOutput.innerHTML = `${humidity}%`;
@@ -62,6 +64,19 @@ function formatDate(date) {
 
 function weatherCity(event) {}
 
+function toCelsius(event) {
+  console.log("cels");
+  let tempOutput = document.querySelector("#temperature");
+  tempOutput.innerHTML = globaltemperature;
+}
+
+function toFahrenheit(event) {
+  console.log("fah");
+  let tempOutput = document.querySelector("#temperature");
+  tempOutput.innerHTML = (Math.round(globaltemperature*1.8+32*100)/100);
+ // tempOutput = globaltemperature*1.8+32;
+}
+
 //print date
 let clock = document.querySelector("h21");
 clock.innerHTML = formatDate(currentTime);
@@ -70,6 +85,12 @@ clock.innerHTML = formatDate(currentTime);
 let city_input = document.querySelector("#city_input");
 city_input.addEventListener("click", updateCityname);
 
-//update temperature
+//convert Fahrenheit and Celsius
+let celsius = document.querySelector("#Celsius");
+celsius.addEventListener("click", toCelsius);
 
-updateCityname("Berlin");
+let fahrenheit = document.querySelector("#Fahrenheit");
+fahrenheit.addEventListener("click", toFahrenheit);
+
+//default City
+updateCityname("berlin");
