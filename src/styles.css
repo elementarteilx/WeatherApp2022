@@ -23,11 +23,13 @@ body {
   min-width: 90px;
 }
 
-
+.bottom {
+  padding: 15px;
+}
 
 .temperature {
-  font-size: 50px;
-}
+  font-size: 30px;
+}  
 
 h2 {
   font-size: 20px;

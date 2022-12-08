@@ -28,7 +28,7 @@
           <div class="col-6">          
            <input type="search" , placeholder="Type a city.." id="city_enter", style="text-align:center" />
           </div>
-          <div class="col-3">
+          <div class="col-3 text-center">
            <input type="submit" , value="Search" , colour="red", id="city_input", style="text-align:center" />
           </div>
           <div class="col-3">
@@ -38,22 +38,22 @@
         </div>
       </div>
       <h2 class="container">city</h2>
-      <h21 class="container">date</h21>
+      <h21 class="container">date</h21>      
+      <div class="bottom">
       <div class="row">
-        <div class="col-6">
-          <div class="clearfix">
-            <div class="float-left">
+        <div class="col-3">
               <div class="temperature", id="temperature"></div>
+        </div>
+        <div class="col-3">
               <input type="submit", class="Celsius", id="Celsius", colour="white", value="°C" /> |
               <input type="submit", class="Fahrenheit", id="Fahrenheit", colour="white", value="F"/>
-            </div>
-          </div>
         </div>
-      <div class="col-6">
-        <ul>
+        <div class="col-4">
+         <ul>
           <li>Humidity: <span id="humidity"></span></li>
           <li>Wind: <span id="wind"></span> km/h</li>
-        </ul>
+         </ul>    
+      </div> 
       </div>
       <script src="app.js"></script>
     </div>
