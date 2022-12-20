@@ -24,6 +24,7 @@ function showTemperature(event) {
   let tempOutput = document.querySelector("#temperature");
   console.log(event);
   let temp = event.data.main.temp;
+  temp = Math.round(temp);
   let humidity = event.data.main.humidity;
   tempOutput.innerHTML = temp;
   globaltemperature = temp;
