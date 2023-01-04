@@ -52,9 +52,6 @@ function showTemperature(event) {
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0 + ${hours}`;
-  }
 
   let index = date.getDay();
   let days = [
