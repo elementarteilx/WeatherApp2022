@@ -71,7 +71,9 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function weatherCity(event) {}
+function getCurrentLocation(event) {
+  console.log("helloL");
+}
 
 function toCelsius(event) {
   console.log("cels");
@@ -101,5 +103,11 @@ celsius.addEventListener("click", toCelsius);
 let fahrenheit = document.querySelector("#Fahrenheit");
 fahrenheit.addEventListener("click", toFahrenheit);
 
+
+let location = document.querySelector("#current_city");
+location.addEventListener("click", getCurrentLocation);
+
+
 //default City
 callcity("berlin");
+console.log("hello");
