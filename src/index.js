@@ -64,7 +64,7 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function searchLocation(event) {
+function searchLocation(position) {
   console.log("hello0");
   console.log(`${position.coords.longitude}`);
   let apiKey = "8a6ee44d7a95db9439f2411cfbeee474";
