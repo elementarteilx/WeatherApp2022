@@ -71,7 +71,29 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function weatherCity(event) {}
+function callcityLocation(position) {
+  console.log("22");
+  console.log(position);
+  console.log("1");
+
+  //preparation for temperature update
+  let apiKey = "8a6ee44d7a95db9439f2411cfbeee474";
+  let units = "metric";
+  let lat = `${position.coords.latitude}`;
+  let long = `${position.coords.longitude}`;
+  console.log(units);
+  console.log(lat);
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${lat}&lon=${long}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = `${position}`;
+}
+
+function weatherCurrentCity(Position) {
+  console.log("weatherCurrentCity");
+  navigator.geolocation.getCurrentPosition(callcityLocation);
+}
 
 function toCelsius(event) {
   console.log("cels");
@@ -93,6 +115,10 @@ clock.innerHTML = formatDate(currentTime);
 //print current city
 let city_input = document.querySelector("#city_input");
 city_input.addEventListener("click", updateCityname);
+
+//display data of local city
+let current_input = document.querySelector("#current_city");
+current_city.addEventListener("click", weatherCurrentCity);
 
 //convert Fahrenheit and Celsius
 let celsius = document.querySelector("#Celsius");
