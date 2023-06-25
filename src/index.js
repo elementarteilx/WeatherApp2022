@@ -83,7 +83,7 @@ function callcityLocation(position) {
   let long = `${position.coords.longitude}`;
   console.log(units);
   console.log(lat);
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${lat}&lon=${long}&key=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather/v1/current?lat=${lat}&lon=${long}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 
   let h2 = document.querySelector("h2");
