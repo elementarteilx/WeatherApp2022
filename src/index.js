@@ -83,11 +83,11 @@ function callcityLocation(position) {
   let long = `${position.coords.longitude}`;
   console.log(units);
   console.log(lat);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather/v1/current?lat=${lat}&lon=${long}&key=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `${position}`;
+  h2.innerHTML = "current city";
 }
 
 function weatherCurrentCity(Position) {
